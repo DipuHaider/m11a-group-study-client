@@ -5,7 +5,7 @@ import Footer from "../pages/shared/footer/Footer";
 
 const Root = () => {
     return (
-        <div>
+        <div className="mx-auto font-manrope">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>
