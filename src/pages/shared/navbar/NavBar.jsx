@@ -18,15 +18,18 @@ const NavBar = () => {
     const userDefaultPic = "https://i.ibb.co/F7V7vzb/user.jpg";
 
     const navLinks = <>
-        <li><NavLink to="/" className="text-lg bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-lg  border border-none hover:border-white">Home</NavLink></li>
+        <li><NavLink to="/" className="text-base bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-sm border border-none hover:border-white">Home</NavLink></li>
+        <li><NavLink to="/allassignment" className="text-base bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-sm py-2 px-4 border border-none hover:border-white">All Assignment</NavLink></li>
         {
             user ? <>
-                <li><NavLink to="/addproduct" className="text-lg bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">Add Product</NavLink></li>
+                <li><NavLink to="/createassignment" className="text-base bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-sm py-2 px-4 border border-none hover:border-white">Create New</NavLink></li>
+                <li><NavLink to="/myassignment" className="text-base bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-sm py-2 px-4 border border-none hover:border-white">My Assignment</NavLink></li>
+                <li><NavLink to="/submittedassignment" className="text-base bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-sm py-2 px-4 border border-none hover:border-white">Submitted</NavLink></li>
             </>
             : 
             <></>
         }
-        <li><NavLink to="/cart" className="text-lg bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-lg py-2 px-4 border border-none hover:border-white">My Cart</NavLink></li>
+       
     </>
 
 

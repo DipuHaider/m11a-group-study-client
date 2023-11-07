@@ -4,6 +4,13 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/home/Home";
 import Login from "../auth/Login/Login";
 import Register from "../auth/Register/Register";
+import CreateAssignment from "../pages/assignment/CreateAssignment";
+import UpdateAssignment from "../pages/assignment/UpdateAssignment";
+import DetailAssignment from "../pages/assignment/DetailAssignment";
+import PrivateRoutes from "./PrivateRoutes";
+import MyAssignment from "../pages/assignment/MyAssignment";
+import SubmittedAssignment from "../pages/assignment/SubmittedAssignment";
+import AllAssignment from "../pages/assignment/AllAssignment";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +30,37 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>,
+            },
+            {
+                path: '/allassignment',
+                element: <AllAssignment></AllAssignment>,
+                // loader: () => fetch('http://localhost:5000/assignment')
+                //loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
+                //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/assignment'),
+            },
+            {
+                path: "createassignment",
+                element: <PrivateRoutes><CreateAssignment></CreateAssignment></PrivateRoutes>,
+            },
+            {
+                path: "updateassignment/:id",
+                element: <PrivateRoutes><UpdateAssignment></UpdateAssignment></PrivateRoutes>,
+                // loader: ({params}) => fetch(`https://m10a-assignment-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/assignment/${params.id}`)
+            },
+            {
+                path: "assignment/:id",
+                element: <PrivateRoutes><DetailAssignment></DetailAssignment></PrivateRoutes>,
+                // loader: ({params}) => fetch(`https://m10a-assignment-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/assignment/${params.id}`),
+            },
+            {
+                path: '/myassignment',
+                element: <PrivateRoutes><MyAssignment></MyAssignment></PrivateRoutes>,
+                //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/cart'),
+            },
+            {
+                path: '/submittedassignment',
+                element: <PrivateRoutes><SubmittedAssignment></SubmittedAssignment></PrivateRoutes>,
+                //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/cart'),
             },
         ]
     }
