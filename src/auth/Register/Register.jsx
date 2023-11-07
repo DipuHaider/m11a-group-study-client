@@ -108,7 +108,7 @@ const Register = () => {
     return (
         <div className="hero min-h-screen">
             <Helmet>
-                <title>Register | Event Management</title>
+                <title>Register | Online Group Study</title>
             </Helmet>
             <div className="hero-content flex-col">
             <div className="text-center">

@@ -34,7 +34,7 @@ const router = createBrowserRouter([
             {
                 path: '/allassignment',
                 element: <AllAssignment></AllAssignment>,
-                // loader: () => fetch('http://localhost:5000/assignment')
+                loader: () => fetch('http://localhost:5000/assignment')
                 //loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
                 //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/assignment'),
             },
