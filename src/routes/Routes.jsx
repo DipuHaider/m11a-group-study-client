@@ -21,7 +21,6 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/brand'),
             },
             {
                 path: '/login',
@@ -35,8 +34,6 @@ const router = createBrowserRouter([
                 path: '/allassignment',
                 element: <AllAssignment></AllAssignment>,
                 loader: () => fetch('http://localhost:5000/assignment')
-                //loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
-                //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/assignment'),
             },
             {
                 path: "createassignment",
@@ -45,12 +42,12 @@ const router = createBrowserRouter([
             {
                 path: "updateassignment/:id",
                 element: <PrivateRoutes><UpdateAssignment></UpdateAssignment></PrivateRoutes>,
-                // loader: ({params}) => fetch(`https://m10a-assignment-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/assignment/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
             },
             {
                 path: "assignment/:id",
                 element: <PrivateRoutes><DetailAssignment></DetailAssignment></PrivateRoutes>,
-                // loader: ({params}) => fetch(`https://m10a-assignment-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/assignment/${params.id}`),
+                loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
             },
             {
                 path: '/myassignment',

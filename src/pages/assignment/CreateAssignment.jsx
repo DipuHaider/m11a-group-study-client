@@ -125,52 +125,6 @@ const CreateAssignment = () => {
                 </div>
             </div>
         </div>
-    //     <div className="max-w-7xl mx-auto my-10 p-2">
-    //     <h2>Create Assignment</h2>
-    //     <form onSubmit={handleAddAssignment} className="mt-8">
-    //         {/* form row */}
-    //         <div className="md:flex mb-8">
-    //             <div className="form-control md:w-1/2 ml-4">
-    //                 <label className="input-group">
-    //                     <span>Assignment Name</span>
-    //                     <input type="text" name="name" placeholder="Assignment name" className="input input-bordered" />
-    //                 </label>
-    //             </div>
-    //             <div className="form-control md:w-1/2 ml-4">
-    //                 <label className="input-group">
-    //                     <span>Assignment Logo</span>
-    //                     <input type="text" name="logo" placeholder="logo" className="input input-bordered" />
-    //                 </label>
-    //             </div>
-    //         </div>
-    //         {/* form row */}
-    //         <div className="md:flex mb-8">
-    //             <div className="form-control md:w-1/3 ml-4">
-    //                 <label className="input-group">
-    //                     <span>Banner 01</span>
-    //                     <input type="text" name="banner1" placeholder="banner1" className="input input-bordered" />
-    //                 </label>
-    //             </div>
-    //             <div className="form-control md:w-1/3 ml-4">
-    //                 <label className="input-group">
-    //                     <span>Banner 02</span>
-    //                     <input type="text" name="banner2" placeholder="banner2" className="input input-bordered" />
-    //                 </label>
-    //             </div>
-    //             <div className="form-control md:w-1/3 ml-4">
-    //                 <label className="input-group">
-    //                     <span>Banner 023</span>
-    //                     <input type="text" name="banner3" placeholder="banner3" className="input input-bordered" />
-    //                 </label>
-    //             </div>
-    //         </div>
-    //         {/* form row Submit */}
-            
-    //         <div className="md:flex mb-8">
-    //             <input type="submit" value="Create Assignment" className="btn btn-block bg-theme-primary text-white hover:bg-white hover:text-theme-primary hover:border-theme-primary" />
-    //         </div>
-    //     </form>
-    // </div>
     );
 };
 

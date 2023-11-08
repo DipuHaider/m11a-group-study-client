@@ -6,7 +6,7 @@ const AllAssignment = () => {
 
     
     const loadedAssignments = useLoaderData();
-    const [assignments, setAssignments] = useState(loadedAssignments);useState
+    const [assignments, setAssignments] = useState(loadedAssignments);
 
     return (
         <div className="max-w-7xl mx-auto my-4">
