@@ -49,6 +49,11 @@ const router = createBrowserRouter([
                 element: <PrivateRoutes><DetailAssignment></DetailAssignment></PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
             },
+            // {
+            //     path: '/taken',
+            //     element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
+            //     loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/cart'),
+            // },
             {
                 path: '/myassignment',
                 element: <PrivateRoutes><MyAssignment></MyAssignment></PrivateRoutes>,
