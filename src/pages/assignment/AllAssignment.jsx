@@ -20,7 +20,7 @@ const levels = Array.from(new Set(assignments.map((assignment) => assignment.lev
 
     return (
         <div className="max-w-7xl mx-auto my-4">
-            <div className="space-x-2">
+            <div className="space-x-2 py-8">
                 {levels.map((level) => (
                 <button
                     key={level}
@@ -34,7 +34,7 @@ const levels = Array.from(new Set(assignments.map((assignment) => assignment.lev
                 ))}
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 py-8">
                 {filteredAssignments.map((assignment) => (
                 <AssignmentCard
                     key={assignment._id}

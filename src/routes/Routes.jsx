@@ -45,6 +45,11 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
             },
             {
+                path: "updatetaken/:id",
+                // element: <PrivateRoutes><UpdateAssignment></UpdateAssignment></PrivateRoutes>,
+                loader: ({params}) => fetch(`http://localhost:5000/taken/${params.id}`)
+            },
+            {
                 path: "assignment/:id",
                 element: <PrivateRoutes><DetailAssignment></DetailAssignment></PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/assignment/${params.id}`)
@@ -62,7 +67,7 @@ const router = createBrowserRouter([
             {
                 path: '/submittedassignment',
                 element: <PrivateRoutes><SubmittedAssignment></SubmittedAssignment></PrivateRoutes>,
-                //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/cart'),
+                loader: () => fetch('http://localhost:5000/taken'),
             },
         ]
     }

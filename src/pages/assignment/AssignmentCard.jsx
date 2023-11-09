@@ -51,10 +51,10 @@ const AssignmentCard = ({ assignment, assignments, setAssignments }) => {
             </figure>
             <div className="card-body items-center text-center pt-2">
                 <h2 className="card-title justify-center text-2xl text-theme-primary ">{title}</h2>
-                <h2 className="card-title justify-center text-2xl text-theme-primary ">{description}</h2>
-                <h2 className="card-title justify-center text-2xl text-theme-primary ">{marks}</h2>
-                <h2 className="card-title justify-center text-2xl text-theme-primary ">{level}</h2>
-                <h2 className="card-title justify-center text-2xl text-theme-primary ">{duedate}</h2>
+                <h2 className="card-title justify-center text-base text-theme-txt70 ">{description}</h2>
+                <h2 className="card-title justify-center text-base text-theme-txt70 ">{marks}</h2>
+                <h2 className="card-title justify-center text-base text-theme-txt70 ">{level}</h2>
+                <h2 className="card-title justify-center text-base text-theme-txt70 ">{duedate}</h2>
 
                 <div className="btn-group btn-group-vertical space-y-4">
 

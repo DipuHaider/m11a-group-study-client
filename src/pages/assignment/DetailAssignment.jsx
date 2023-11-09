@@ -48,11 +48,13 @@ const DetailAssignment = () => {
         const assignmentStatus = "pending";
         const assignmentPdfLink = pdflink;
         const assignmentNote = note;
+        const assignmentMarks = 0;
+
 
         console.log(assignmentPdfLink)
 
 
-        const addedAssignment = { assignmentid, assignmentName, assignmentOwner, assignmentTaker, assignmentStatus, assignmentPdfLink, assignmentNote }
+        const addedAssignment = { assignmentid, assignmentName, assignmentOwner, assignmentTaker, assignmentStatus, assignmentPdfLink, assignmentNote, assignmentMarks }
 
         fetch('http://localhost:5000/taken', {
             method: 'POST',
@@ -119,7 +121,7 @@ const DetailAssignment = () => {
                                     >
                                 <div>
                                     <label className="label">
-                                        <span className="text-base label-text">Assignment Title</span>
+                                        <span className="text-base label-text">PDF Link</span>
                                     </label>
                                     <input type="text" name="pdflink" placeholder="title" className="w-full input input-bordered input-primary border-theme-primary" />
                                 </div>
