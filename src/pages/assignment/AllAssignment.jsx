@@ -34,7 +34,7 @@ const levels = Array.from(new Set(assignments.map((assignment) => assignment.lev
                 ))}
             </div>
 
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
                 {filteredAssignments.map((assignment) => (
                 <AssignmentCard
                     key={assignment._id}
