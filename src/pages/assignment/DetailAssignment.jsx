@@ -20,7 +20,7 @@ const DetailAssignment = () => {
 
     useEffect(() => {
         
-        fetch("http://localhost:5000/taken")
+        fetch("https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/taken")
             .then((response) => response.json())
             .then((data) => {
                 setAssignments(data);
@@ -56,7 +56,7 @@ const DetailAssignment = () => {
 
         const addedAssignment = { assignmentid, assignmentName, assignmentOwner, assignmentTaker, assignmentStatus, assignmentPdfLink, assignmentNote, assignmentMarks }
 
-        fetch('http://localhost:5000/taken', {
+        fetch('https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/taken', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

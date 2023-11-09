@@ -18,7 +18,7 @@ const SubmittedCard = ({submit, submits, setSubmits}) => {
 
         const updatedTaken = { assignmentStatus, assignmentNote, assignmentMarks }
 
-        fetch(`http://localhost:5000/updatetaken/${_id}`, {
+        fetch(`https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/updatetaken/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

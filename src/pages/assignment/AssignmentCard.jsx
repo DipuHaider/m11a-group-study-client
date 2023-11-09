@@ -22,7 +22,7 @@ const AssignmentCard = ({ assignment, assignments, setAssignments }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/assignment/${_id}`, {
+                fetch(`https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/assignment/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
