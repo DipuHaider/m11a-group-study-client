@@ -58,8 +58,7 @@ const AssignmentCard = ({ assignment, assignments, setAssignments }) => {
                 <h2 className="card-title justify-center text-2xl text-theme-primary ">{useremail}</h2>
 
                 <div className="btn-group btn-group-vertical space-y-4">
-                    {/* <button className="btn">Details</button> */}
-                    {_id}
+
                     <Link to={`/assignment/${_id}`}><button className="btn">Details</button></Link>
                     {
                         user ? <>

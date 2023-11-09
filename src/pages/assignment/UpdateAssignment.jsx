@@ -1,10 +1,15 @@
 import { useLoaderData } from "react-router-dom";
+import { useState } from 'react';
 import Swal from "sweetalert2";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const UpdateAssignment = () => {
 
+    
     const assignment = useLoaderData();
-    const { _id, title, description, marks, thumbnail, level } = assignment;
+    const { _id, title, description, marks, thumbnail, level, duedate } = assignment;
+    const [startDate, setStartDate] = useState(duedate ? new Date(duedate) : null);
 
     const handleUpdateAssignment = event => {
         event.preventDefault();
@@ -16,9 +21,9 @@ const UpdateAssignment = () => {
         const marks = form.marks.value;
         const thumbnail = form.thumbnail.value;
         const level = form.level.value;
-        // const duedate = form.duedate.value;
+        const duedate = form.duedate.value;
 
-        const updatedAssignment = { title, description, marks, thumbnail, level}
+        const updatedAssignment = { title, description, marks, thumbnail, level, duedate}
 
         console.log(updatedAssignment);
 
@@ -91,7 +96,7 @@ const UpdateAssignment = () => {
                                 <label className="label">
                                     <span className="text-base label-text">Difficulty Level</span>
                                 </label>
-                                <select name="level" value={level}  className="select select-bordered border-theme-primary w-full max-w-xs">
+                                <select name="level" defaultValue={level}  className="select select-bordered border-theme-primary w-full max-w-xs">
                                     <option value="Easy">Easy</option>
                                     <option value="Medium">Medium</option>
                                     <option value="Hard">Hard</option>
@@ -101,7 +106,8 @@ const UpdateAssignment = () => {
                                 <label className="label">
                                     <span className="text-base label-text">Due Date</span>
                                 </label>
-                                {/* <DatePicker name="duedate" selected={startDate} onChange={(date) => setStartDate(date)}  className="select select-bordered border-theme-primary w-full max-w-xs"/> */}
+                                <DatePicker name="duedate" selected={startDate} onChange={(date) => setStartDate(date)}  className="select select-bordered border-theme-primary w-full max-w-xs"/>
+                                
                             </div>
                             
                         </div>
