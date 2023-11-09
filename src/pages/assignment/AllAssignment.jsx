@@ -45,25 +45,6 @@ const levels = Array.from(new Set(assignments.map((assignment) => assignment.lev
                 ))}
             </div>
         </div>
-// {assignments?.map((assignment) => {
-//     // Replace 'desiredLevel' with the level you want to filter by
-//     const desiredLevel = "Hard"; // Change this to your desired level
-
-//     // Check if the assignment's level matches the desired level
-//     if (assignment.level === desiredLevel) {
-//       return (
-//         <AssignmentCard
-//           key={assignment._id}
-//           assignment={assignment}
-//           assignments={assignments}
-//           setAssignments={setAssignments}
-//         />
-//       );
-//     }
-
-//     // If the assignment's level doesn't match, return null (or you can omit it)
-//     return null;
-//   })}
 
         // <div className="max-w-7xl mx-auto my-4">
         //         <div className='grid grid-cols-3 gap-3'>

@@ -57,7 +57,7 @@ const router = createBrowserRouter([
             {
                 path: '/myassignment',
                 element: <PrivateRoutes><MyAssignment></MyAssignment></PrivateRoutes>,
-                //loader: () => fetch('https://m10a-brand-shop-server-283gyzcf7-dipuhaiders-projects.vercel.app/cart'),
+                loader: () => fetch('http://localhost:5000/assignment'),
             },
             {
                 path: '/submittedassignment',
