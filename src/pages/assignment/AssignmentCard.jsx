@@ -45,7 +45,7 @@ const AssignmentCard = ({ assignment, assignments, setAssignments }) => {
 
     return (
         <>
-        <div className="card bg-base-100 shadow-xl hover:shadow-theme-primary">
+        <div className="card card-side bg-base-100 shadow-xl hover:shadow-theme-primary">
             <figure className="px-10 pt-5">
                 <img src={thumbnail} alt={title} className="rounded-xl w-48" />
             </figure>
@@ -55,7 +55,6 @@ const AssignmentCard = ({ assignment, assignments, setAssignments }) => {
                 <h2 className="card-title justify-center text-2xl text-theme-primary ">{marks}</h2>
                 <h2 className="card-title justify-center text-2xl text-theme-primary ">{level}</h2>
                 <h2 className="card-title justify-center text-2xl text-theme-primary ">{duedate}</h2>
-                <h2 className="card-title justify-center text-2xl text-theme-primary ">{useremail}</h2>
 
                 <div className="btn-group btn-group-vertical space-y-4">
 
