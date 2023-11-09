@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import Swal from "sweetalert2";
 import DatePicker from "react-datepicker";
@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const UpdateAssignment = () => {
 
+    const navigate = useNavigate();
     
     const assignment = useLoaderData();
     const { _id, title, description, marks, thumbnail, level, duedate } = assignment;
@@ -46,6 +47,10 @@ const UpdateAssignment = () => {
                     })
                 }
             })
+            setTimeout(() => {
+                navigate('/allassignment');
+            }, 2000);
+            
     }
 
     return (

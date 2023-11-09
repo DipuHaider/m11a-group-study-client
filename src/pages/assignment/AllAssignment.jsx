@@ -20,31 +20,31 @@ const levels = Array.from(new Set(assignments.map((assignment) => assignment.lev
 
     return (
         <div className="max-w-7xl mx-auto my-4">
-      <div className="space-x-2">
-        {levels.map((level) => (
-          <button
-            key={level}
-            className={`btn ${
-              activeTab === level ? "btn-active" : "text-base bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-sm py-2 px-4 border border-none hover:border-white"
-            }`}
-            onClick={() => setActiveTab(level)}
-          >
-            {level}
-          </button>
-        ))}
-      </div>
+            <div className="space-x-2">
+                {levels.map((level) => (
+                <button
+                    key={level}
+                    className={`btn ${
+                    activeTab === level ? "btn-active" : "text-base bg-transparent hover:bg-text-theme-light text-theme-light hover:text-theme-primary rounded shadow hover:shadow-sm py-2 px-4 border border-none hover:border-white"
+                    }`}
+                    onClick={() => setActiveTab(level)}
+                >
+                    {level}
+                </button>
+                ))}
+            </div>
 
-      <div className="grid grid-cols-3 gap-3">
-        {filteredAssignments.map((assignment) => (
-          <AssignmentCard
-            key={assignment._id}
-            assignment={assignment}
-            assignments={assignments}
-            setAssignments={setAssignments}
-        ></AssignmentCard>
-        ))}
-      </div>
-    </div>
+            <div className="grid grid-cols-3 gap-3">
+                {filteredAssignments.map((assignment) => (
+                <AssignmentCard
+                    key={assignment._id}
+                    assignment={assignment}
+                    assignments={assignments}
+                    setAssignments={setAssignments}
+                ></AssignmentCard>
+                ))}
+            </div>
+        </div>
 // {assignments?.map((assignment) => {
 //     // Replace 'desiredLevel' with the level you want to filter by
 //     const desiredLevel = "Hard"; // Change this to your desired level
