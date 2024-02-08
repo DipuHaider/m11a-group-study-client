@@ -22,7 +22,7 @@ const AssignmentCard = ({ assignment, assignments, setAssignments }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/assignment/${_id}`, {
+                fetch(`https://m11a-group-study-server.vercel.app/assignment/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

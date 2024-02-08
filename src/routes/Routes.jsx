@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: '/allassignment',
                 element: <AllAssignment></AllAssignment>,
-                loader: () => fetch('https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/assignment')
+                loader: () => fetch('https://m11a-group-study-server.vercel.app/assignment')
             },
             {
                 path: "createassignment",
@@ -42,27 +42,27 @@ const router = createBrowserRouter([
             {
                 path: "updateassignment/:id",
                 element: <PrivateRoutes><UpdateAssignment></UpdateAssignment></PrivateRoutes>,
-                loader: ({params}) => fetch(`https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/assignment/${params.id}`)
+                loader: ({params}) => fetch(`https://m11a-group-study-server.vercel.app/assignment/${params.id}`)
             },
             {
                 path: "updatetaken/:id",
                 // element: <PrivateRoutes><UpdateAssignment></UpdateAssignment></PrivateRoutes>,
-                loader: ({params}) => fetch(`https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/taken/${params.id}`)
+                loader: ({params}) => fetch(`https://m11a-group-study-server.vercel.app/taken/${params.id}`)
             },
             {
                 path: "assignment/:id",
                 element: <PrivateRoutes><DetailAssignment></DetailAssignment></PrivateRoutes>,
-                loader: ({params}) => fetch(`https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/assignment/${params.id}`)
+                loader: ({params}) => fetch(`https://m11a-group-study-server.vercel.app/assignment/${params.id}`)
             },
             {
                 path: '/myassignment',
                 element: <PrivateRoutes><MyAssignment></MyAssignment></PrivateRoutes>,
-                loader: () => fetch('https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/assignment'),
+                loader: () => fetch('https://m11a-group-study-server.vercel.app/assignment'),
             },
             {
                 path: '/submittedassignment',
                 element: <PrivateRoutes><SubmittedAssignment></SubmittedAssignment></PrivateRoutes>,
-                loader: () => fetch('https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/taken'),
+                loader: () => fetch('https://m11a-group-study-server.vercel.app/taken'),
             },
         ]
     }

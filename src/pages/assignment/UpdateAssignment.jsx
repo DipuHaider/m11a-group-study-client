@@ -28,7 +28,7 @@ const UpdateAssignment = () => {
 
         console.log(updatedAssignment);
 
-        fetch(`https://m11a-group-study-server-6zthuupgb-dipuhaiders-projects.vercel.app/assignment/${_id}`, {
+        fetch(`https://m11a-group-study-server.vercel.app/assignment/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
